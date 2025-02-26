@@ -1,0 +1,104 @@
+
+
+/* Individual Todo List Item */
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    overflow: hidden; /* Prevents internal scrolling */
+}
+
+.list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input inside List Item */
+.list-item input {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.list-item input:focus {
+    border-color: #0056b3;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons span,
+.icons i {
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.icons span:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.icons i {
+    color: red;
+}
+
+.icons i:hover {
+    color: darkred;
+    transform: scale(1.1);
+}
+
+/* Button Styles */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .icons {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    /* Hide scrollbar for mobile */
+    .todo-list-container::-webkit-scrollbar {
+        display: none;
+    }
+}
