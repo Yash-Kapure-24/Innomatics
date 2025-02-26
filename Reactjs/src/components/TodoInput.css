@@ -1,0 +1,62 @@
+.input_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px; /* Adds spacing between input and button */
+    padding: 10px;
+    background-color: #f8f9fa; /* Light background for better contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for better UI */
+}
+
+.input_container input {
+    flex: 1; /* Allows input to expand within the container */
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input_container input:focus {
+    border-color: rgb(0, 149, 255);
+    box-shadow: 0 0 8px rgba(0, 149, 255, 0.5);
+}
+
+.input_container button {
+    padding: 12px 16px;
+    background-color: rgb(0, 149, 255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.input_container button:hover {
+    background-color: rgb(0, 123, 215);
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.input_container button:active {
+    transform: scale(0.98); /* Press effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .input_container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .input_container input {
+        width: 100%;
+    }
+
+    .input_container button {
+        width: 100%;
+    }
+}
